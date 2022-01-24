@@ -4,9 +4,94 @@
 <head>
     <title>Mi primera web</title> <!--El título de la pestaña, 
                                   lo usa el motor de búsqueda para recomendar la página -->
+
+    <style>
+        table, th, td{
+            border: 1px solid black;
+        }
+    </style>
 </head>
 
 <body>
+
+
+    <table style="width: 500px;">
+
+        <thead> <!-- Agrupamos elementos de cabecera de las tablas-->
+            <tr> <!--Es una table row, fila en la tabla-->
+                <th>Producto</th> <!-- Es una cabecera-->
+                <th>Precio</th>
+            </tr>
+        </thead>
+
+        <tbody> <!-- Agrupamos elementos del cuerpo de la tabla-->
+            <tr>
+                <td>Hola beats</td> <!-- Se utiliza para definir elementos standar en nuestra tabla-->
+                <td>Gratis</td>  <!--Se corresponden 1-1 con las cabeceras y los elementos que están en esa fila-->
+            </tr>
+            <tr>
+                <td>Chanchito feliz</td>
+                <td>19,90$</td>
+            </tr>
+            <tr>
+                <td>Chanchito feliz muy feliz</td>
+                <td>29,90$</td>
+            </tr>
+        </tbody>
+
+        <tfoot>
+            <td></td>
+            <td>Total: 49.80$</td>
+        </tfoot>
+        </table>
+
+    <!-- ul es lista no ordenada -->
+    <ul>
+        <li>Elemento 1</li>
+        <li>Elemento 2</li>
+        <li>Elemento 3</li>
+        <li>Elemento 4</li>
+    </ul>
+
+     <!-- ol es lista ordenada -->
+    <ol>
+        <li value="50">Elemento 1</li> <!-- value setea el valor inicial -->
+        <li>Elemento 2</li>
+        <li>Elemento 3</li>
+        <li>Elemento 4</li>
+        <li>
+            <ol>
+                <li style="list-style-type: lower-roman;"> sub elemento 1</li>
+                <li style="list-style-type: lower-roman;"> sub elemento 2</li>
+                <li style="list-style-type: lower-roman;"> sub elemento 3</li>
+            </ol>
+        </li>
+    </ol>
+
+                                    <!--con GET los datos se pasan por URL, con POST por files-->
+    <form action="/formulario" method="POST">  <!-- es la etiqueta para hacerle request al usuario, va con el input-->
+        <label for="nombre">Nombre</label> <!-- es la etiqueta para mostrar por pantalla un nombre al formulario, con for estamos apuntando a "nombre" que ne este caso es el input-->
+        <input type="texts" id="nombre" name="nombre" placeholder="Nombre"/> <!-- con id designamos un nombre de referencia para que esta etiqueta pueda ser referenciada, con name el servidor interpreta el objeto de formulario que tiene una llave y un valor
+                                                en este caso {nombre} salvo que le escribamos valor dentro en este caso iría el valor
+                                                placeholder es el atributo/propiedad que aperecra en el input 
+                                                type por default es texto, es para establecer comportamiento para el input (email, password, radio, checkbox, file, ...)-->
+        <br><br>
+        <label for="apellido">Apellido</label>
+        <input type="text" id="apellido" name="apellido" placeholder="Apellido"/>
+        <br><br>
+        <label for="comentario">Comentario</label>
+        <br>
+        <textarea rows="10" cols="50" id="comentario" placeholder="ingrese comentario" name="comentario"></textarea>
+        <br>
+        <input type="submit"/> <!-- etiqueta para enviar la información, para esto tenemos que definir action y el metodo-->
+        <br>
+        <button type="button">Tipo botón</button>  <!--button: botón normal, para darle comportamiento habría que hacerlo desde js.-->
+        <button type="reset">Tipo reset</button>   <!--reset: botón que resetea al defecto-->
+        <button type="submit">Tipo submit</button> <!--submit: es por el defecto-->
+
+        <!-- la etiqueta de button es mucho más personalizable que una etiqueta de input de tipo submit-->>
+    </form>
+
     <h1>Mi primer heading</h1>
     <h2>Mi segundo heading</h2>
     <h3>Mi tercer heading</h3>
@@ -37,7 +122,8 @@
     <br>
     <br>
     <img src="Img/Fachiin.jpg" width="400"/>
-    <p>Probando git</p>
+    
+    
 </body>
 
 </html>

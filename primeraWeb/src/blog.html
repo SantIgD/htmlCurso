@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html
+>
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+
+    <header>
+        <h1 id="titulo">Blog de Santi</h1> <!-- con el id simplemente le establezco un nombre para poder identificar este header. Se utiliza para darle estilos con css
+                                                o darle ciertos comportamientos con JS-->
+    </header> <!--Agrupar links/imagenes/logos de nuestra pagina. No se pueden anidar con headers ni con footers-->    
+    
+    <div> <!-- Misma funcionalidad que section, es para agrupar. Es más viejo, ahora se utilizan section o article-->
+        <p class="parrafo">Soy un párrafo dentro de un div</p> <!-- El class es para agrupar componentes de html para darle estilos o jugar con JS. En vez de ID uso varios con class-->
+    </div>
+
+    <section>
+        <article class="post"> <!--Se utiliza para poder definir contenido independiente-->
+            <h2>Título de mi post</h2>
+            <p>Descripción de mi post</p>
+            <img src="Img/Fachiin.jpg" width="400"/>
+            <p>Texto del artículo que hay acá y es texto de prueba. Chanchito Feliz!</p>
+        </article>
+
+        
+        <article class="post"> <!--Se utiliza para poder definir contenido independiente-->
+            <h2>Título de mi post 2</h2>
+            <p>Descripción de mi post 2</p>
+            <img src="Img/otoño.jpg" width="400"/>
+            <p>Texto del artículo que hay acá y es texto de prueba. Chanchito Feliz!</p>
+        </article>
+
+        <article class="post"> <!--Se utiliza para poder definir contenido independiente-->
+            <h2>Título de mi post 3</h2>
+            <p>Descripción de mi post 3</p>
+            <img src="Img/verano.jpg" width="400"/>
+            <p>Texto del artículo que hay acá y es texto de prueba. Chanchito Feliz!</p>
+        </article>
+
+    </section> <!-- Lugar para colocar nuestras etiquetas-->
+
+    <footer>
+        <a href="#titulo">Ir a titulo</a>
+        <br>
+        <a href="mailto:sdemagistris@szicom.com"> Contactame aquí</a>
+        <p>Copyright 2021</p>
+    </footer> <!--Coloca el pie de página de nuestra página web-->
+
+</body>
+</html>
